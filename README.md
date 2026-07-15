@@ -10,18 +10,18 @@ The **Wikipedia Tool** allows applications to retrieve factual information from 
 
 ### What this example demonstrates
 
-- Initializing the `WikipediaAPIWrapper`
-- Wrapping it as a LangChain `Tool`
-- Invoking the tool with a user query
-- Retrieving and displaying information from Wikipedia
+* Initializing the `WikipediaAPIWrapper`
+* Wrapping it as a LangChain `Tool`
+* Invoking the tool with a user query
+* Retrieving and displaying information from Wikipedia
 
 ### Technologies Used
 
-- Python
-- LangChain
-- LangChain Community
-- OpenAI
-- Wikipedia API
+* Python
+* LangChain
+* LangChain Community
+* OpenAI
+* Wikipedia API
 
 ### Sample Query
 
@@ -46,17 +46,17 @@ The **Weather Tool** demonstrates how to create a custom LangChain tool using th
 
 ### What this example demonstrates
 
-- Creating a custom tool using the `@tool` decorator
-- Accepting user input as a tool argument
-- Fetching weather data from an external REST API
-- Invoking the tool using `.invoke()`
+* Creating a custom tool using the `@tool` decorator
+* Accepting user input as a tool argument
+* Fetching weather data from an external REST API
+* Invoking the tool using `.invoke()`
 
 ### Technologies Used
 
-- Python
-- LangChain Core
-- Requests
-- wttr.in Weather Service
+* Python
+* LangChain Core
+* Requests
+* wttr.in Weather Service
 
 ### Sample Query
 
@@ -81,16 +81,16 @@ The **Email Validation Tool** demonstrates how to build a custom LangChain tool 
 
 ### What this example demonstrates
 
-- Creating a custom tool using the `@tool` decorator
-- Validating email addresses using the `email-validator` library
-- Handling invalid email formats with exceptions
-- Invoking the tool using `.invoke()`
+* Creating a custom tool using the `@tool` decorator
+* Validating email addresses using the `email-validator` library
+* Handling invalid email formats with exceptions
+* Invoking the tool using `.invoke()`
 
 ### Technologies Used
 
-- Python
-- LangChain Core
-- email-validator
+* Python
+* LangChain Core
+* email-validator
 
 ### Sample Query
 
@@ -111,4 +111,37 @@ For an invalid email:
 
 ```
 ❌ Invalid email address: An email address must have an @-sign.
+```
+
+---
+
+## 🕒 Current Date & Time Tool
+
+The **Current Date & Time Tool** demonstrates how to build a simple custom LangChain tool that returns the system's current date and time. It uses Python's built-in `datetime` module and exposes the functionality through LangChain's `@tool` decorator.
+
+### What this example demonstrates
+
+* Creating a custom tool using the `@tool` decorator
+* Retrieving the current system date and time
+* Formatting the output in a human-readable format
+* Invoking the tool using `.invoke()`
+
+### Technologies Used
+
+* Python
+* LangChain Core
+* datetime
+
+### Sample Query
+
+```python
+result = current_datetime_tool.invoke({})
+
+print(result)
+```
+
+### Example Output
+
+```
+Monday, 14 July 2026 | 10:45:32 AM
 ```
