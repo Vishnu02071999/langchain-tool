@@ -10,18 +10,18 @@ The **Wikipedia Tool** allows applications to retrieve factual information from 
 
 ### What this example demonstrates
 
-* Initializing the `WikipediaAPIWrapper`
-* Wrapping it as a LangChain `Tool`
-* Invoking the tool with a user query
-* Retrieving and displaying information from Wikipedia
+- Initializing the `WikipediaAPIWrapper`
+- Wrapping it as a LangChain `Tool`
+- Invoking the tool with a user query
+- Retrieving and displaying information from Wikipedia
 
 ### Technologies Used
 
-* Python
-* LangChain
-* LangChain Community
-* OpenAI
-* Wikipedia API
+- Python
+- LangChain
+- LangChain Community
+- OpenAI
+- Wikipedia API
 
 ### Sample Query
 
@@ -46,17 +46,17 @@ The **Weather Tool** demonstrates how to create a custom LangChain tool using th
 
 ### What this example demonstrates
 
-* Creating a custom tool using the `@tool` decorator
-* Accepting user input as a tool argument
-* Fetching weather data from an external REST API
-* Invoking the tool using `.invoke()`
+- Creating a custom tool using the `@tool` decorator
+- Accepting user input as a tool argument
+- Fetching weather data from an external REST API
+- Invoking the tool using `.invoke()`
 
 ### Technologies Used
 
-* Python
-* LangChain Core
-* Requests
-* wttr.in Weather Service
+- Python
+- LangChain Core
+- Requests
+- wttr.in Weather Service
 
 ### Sample Query
 
@@ -71,4 +71,44 @@ print(result)
 
 ```
 Bangalore: 🌦️ +24°C
+```
+
+---
+
+## 📧 Email Validation Tool
+
+The **Email Validation Tool** demonstrates how to build a custom LangChain tool that validates whether an email address is correctly formatted. It leverages the `email-validator` library to check the syntax of an email and returns a clear validation message.
+
+### What this example demonstrates
+
+- Creating a custom tool using the `@tool` decorator
+- Validating email addresses using the `email-validator` library
+- Handling invalid email formats with exceptions
+- Invoking the tool using `.invoke()`
+
+### Technologies Used
+
+- Python
+- LangChain Core
+- email-validator
+
+### Sample Query
+
+```python
+email = "john.doe@example.com"
+result = validate_email_tool.invoke(email)
+
+print(result)
+```
+
+### Example Output
+
+```
+✅ 'john.doe@example.com' is a valid email address.
+```
+
+For an invalid email:
+
+```
+❌ Invalid email address: An email address must have an @-sign.
 ```
