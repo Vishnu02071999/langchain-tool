@@ -145,3 +145,42 @@ print(result)
 ```
 Monday, 14 July 2026 | 10:45:32 AM
 ```
+---
+
+## 🌐 Web Search Tool
+
+The **Web Search Tool** demonstrates how to integrate web search capabilities into LangChain using the `DuckDuckGoSearchRun` tool. It allows applications to search the web for the latest information and retrieve relevant results without requiring an API key.
+
+Unlike the Wikipedia Tool, which searches only Wikipedia articles, the Web Search Tool can retrieve information from across the web, making it useful for answering questions about recent events, trends, technologies, and other topics that require up-to-date information.
+
+### What this example demonstrates
+
+* Integrating DuckDuckGo Search with LangChain
+* Creating a custom tool using the `@tool` decorator
+* Accepting user queries as input
+* Retrieving real-time information from the web
+* Invoking the tool using `.invoke()`
+
+### Technologies Used
+
+* Python
+* LangChain Core
+* LangChain Community
+* DuckDuckGo Search
+
+### Sample Query
+
+```python
+query = "Latest advancements in Artificial Intelligence"
+
+result = web_search_tool.invoke(query)
+
+print(result)
+```
+
+### Example Output
+
+```
+Recent advancements in Artificial Intelligence include improvements in multimodal models, AI agents, reasoning models, robotics, and generative AI applications across healthcare, finance, education, and software development.
+```
+
